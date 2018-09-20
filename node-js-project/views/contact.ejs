@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Contact Us
+        </title>
+        <style>
+        h1{
+            font: bold;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 42px;
+            font-style: italic;
+            color-interpolation-filters: auto;
+            color: coral;
+            text-align: center;
+        }
+        body{
+            color: dimgray;
+            background: aqua;
+        }
+        </style>
+    </head>   
+    <body>
+        <h1>Feel free to contact us!!</h1>
+        <form id="contact-form" method="POST" action="/contact">
+            <label for="name">Name</label>
+            <input type="text" name="name" value="<%= qs.name%>">
+            <label for="dept">Dept</label>
+            <input type="text" name="dept" value="<%= qs.dept%>">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+            <input type="submit" value="submit">
+        </form>
+    </body>    
+</html>

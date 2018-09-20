@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Profile page
+    </title>
+    <style>
+    h1{
+        font: bold;
+        color: white;
+        background-color: aqua;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 48px;
+        font-style: italic;
+    }
+    </style>
+</head>
+<body>
+    <h1>
+            <% include partial/nav.ejs %>
+        You are viewing the profile of <%= personId%>
+    </h1>
+    <h2>
+        Age:<%=data.age%><br>
+        Bio:<%=data.bio%>
+    </h2>
+    <ul><% data.interests.forEach(function(value){%>
+        <li>
+            <%= value %>
+        </li>
+   <% }); %>
+    </ul>
+</body>
+</html>
