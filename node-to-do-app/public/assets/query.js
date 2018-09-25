@@ -15,7 +15,8 @@ $(document).ready(function(){
     });
 
     $('li').on('click',function(){
-        var data=$(this).text().replace(/ /g, "-");
+        var data=$(this).text();
+        console.log(data);
         $.ajax({
             url:'/todo/'+data,
             type:'DELETE',

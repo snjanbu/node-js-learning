@@ -1,26 +1,56 @@
 body{
-    background-color: cornsilk;
+    margin-top: 10%;
+    background-color: black;
     align-content: center;
     font: bold;
-    display: table;
+    align-items: center;
+    text-align: center;
 }
-.form{
+.content{
     display: inline-block;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 20px;
-    letter-spacing: 1px;
+    align-content: center;
+    display: inline-block;
 }
 li:hover{
     text-decoration: line-through;
-    background: rgba(0,0,0,0.2);
+    background:red;
 }
-li{
-    width: 100%;
+.formClass{
+    padding: 5px;
+    margin: 5px;
+}
+input{
     padding: 20px;
     box-sizing: border-box;
     font-family: arial;
     font-size: 20px;
+    border: 2px white;
+    background: white;
+    margin:5px;   
+}
+input[type="submit"]:hover{
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: arial;
+    font-size: 20px;
+    border: 2px white;
+    background: green;
+    margin:5px;   
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: arial;
+    font-size: 20px;
+    border: 2px solid white;
+    background: white;
+    margin:5px;
+    color: black;
     cursor: pointer;
+    list-style-type: none;
     letter-spacing: 1px;
 }

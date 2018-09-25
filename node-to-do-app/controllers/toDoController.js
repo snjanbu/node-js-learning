@@ -9,7 +9,6 @@ var schema=new mongoose.Schema({
 var todo=mongoose.model('Todo',schema);
 
 var urlEncodedParser=bodyParser.urlencoded({extended:false});
-//var data=[{item:'coding'},{item:'eating'},{item:'sleeping'}];
 module.exports=function(app){
 
     app.get('/todo',function(req,res){
@@ -23,6 +22,7 @@ module.exports=function(app){
 
     app.post('/todo',urlEncodedParser,function(req,res){
         var item=req.body;
+        console.log(item);
         todo(item).save(function(error,data){
             if(error){
                 throw error;
@@ -33,7 +33,7 @@ module.exports=function(app){
 
     app.delete('/todo/:id',function(req,res){
         var itemValue=req.params.id;
-        todo.find({item:itemValue.replace(/\-/,' ')}).remove(function(error,data){
+        todo.find({item:itemValue.trim()}).remove(function(error,data){
             if(error){
                 throw error;
             }
